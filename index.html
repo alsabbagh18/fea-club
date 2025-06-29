@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دليل نادي كلية الاقتصاد والإدارة</title>
+    <style>
+        :root {
+            --primary-color: #003366;
+            --secondary-color: #ff6600;
+            --accent-color: #0066cc;
+            --text-dark: #1f2937;
+            --text-light: #6b7280;
+            --bg-light: #f0f4f8;
+            --bg-white: #ffffff;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: var(--bg-white);
+            box-shadow: var(--shadow);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--text-dark);
+            transition: color 0.3s ease;
+            font-weight: 500;
+        }
+
+        .nav-menu a:hover {
+            color: var(--secondary-color);
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 80px;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 50%, var(--accent-color) 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"><path fill="%23ffffff10" d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"></path></svg>') repeat-x;
+            opacity: 0.3;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            animation: fadeInUp 1s ease 0.2s;
+            animation-fill-mode: both;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: white;
+            color: var(--primary-color);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            animation: fadeInUp 1s ease 0.4s;
+            animation-fill-mode: both;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+            background: var(--bg-light);
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        section {
+            margin: 4rem 0;
+            padding: 2rem;
+            background: var(--bg-white);
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            animation: fadeIn 0.5s ease;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        h3 {
+            color: var(--text-dark);
+            margin: 1.5rem 0 1rem;
+            font-size: 1.5rem;
+        }
+
+        /* Cards */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .card {
+            background: var(--bg-light);
+            padding: 2rem;
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .card h4 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+
+        th, td {
+            padding: 1rem;
+            text-align: right;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        th {
+            background: var(--bg-light);
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        tr:hover {
+            background: var(--bg-light);
+        }
+
+        /* Lists */
+        ul {
+            list-style: none;
+            padding-right: 0;
+        }
+
+        ul li {
+            padding: 0.5rem 0;
+            padding-right: 2rem;
+            position: relative;
+        }
+
+        ul li::before {
+            content: "✅";
+            position: absolute;
+            right: 0;
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding: 2rem 0;
+        }
+
+        .timeline-item {
+            padding: 1rem 2rem;
+            border-right: 3px solid var(--primary-color);
+            position: relative;
+            margin-bottom: 2rem;
+        }
+
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            right: -8px;
+            top: 1.5rem;
+            width: 13px;
+            height: 13px;
+            background: var(--secondary-color);
+            border-radius: 50%;
+        }
+
+        /* FAQ */
+        .faq-item {
+            margin: 1rem 0;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 1rem;
+            background: var(--bg-light);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: bold;
+        }
+
+        .faq-answer {
+            padding: 1rem;
+            display: none;
+            background: white;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question::after {
+            transform: rotate(180deg);
+        }
+
+        .faq-question::after {
+            content: "⌄";
+            font-size: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 3rem 2rem;
+            margin-top: 4rem;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                right: 0;
+                width: 100%;
+                background: var(--bg-white);
+                flex-direction: column;
+                padding: 1rem;
+                box-shadow: var(--shadow);
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .cards-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Print Styles */
+        @media print {
+            nav, .cta-button, .menu-toggle {
+                display: none;
+            }
+
+            .hero {
+                margin-top: 0;
+                padding: 2rem;
+            }
+
+            section {
+                break-inside: avoid;
+                box-shadow: none;
+                border: 1px solid #e5e7eb;
+            }
+        }
+
+        /* Badges */
+        .badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            background: var(--secondary-color);
+            color: white;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: bold;
+            margin: 0 0.25rem;
+            transition: transform 0.2s ease;
+        }
+        
+        .badge:hover {
+            transform: scale(1.1);
+        }
+
+        .badge.success {
+            background: var(--accent-color);
+        }
+
+        .badge.primary {
+            background: var(--primary-color);
+        }
+
+        .badge.warning {
+            background: #f59e0b;
+        }
+
+        /* Team links hover effect */
+        .team-link {
+            background: var(--bg-light);
+            padding: 0.75rem;
+            border-radius: 8px;
+            text-decoration: none;
+            color: var(--text-dark);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+        
+        .team-link:hover {
+            background: var(--secondary-color) !important;
+            color: white !important;
+            transform: translateX(-5px);
+            border-color: var(--secondary-color);
+        }
+        .tooltip {
+            position: relative;
+            cursor: help;
+            border-bottom: 1px dashed var(--text-light);
+        }
+
+        .tooltip:hover::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            bottom: 100%;
+            right: 50%;
+            transform: translateX(50%);
+            background: var(--text-dark);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            white-space: nowrap;
+            font-size: 0.875rem;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="nav-logo" style="display: flex; align-items: center; gap: 0.5rem;">
+                <div style="width: 40px; height: 40px; background: var(--secondary-color); border-radius: 8px; display: flex; align-items: center; justify-content: center; position: relative;">
+                    <div style="font-size: 1.5rem; color: white;">🏛️</div>
+                </div>
+                <span>نادي كلية الاقتصاد والإدارة</span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#about">عن النادي</a></li>
+                <li><a href="#join">كيف تنضم</a></li>
+                <li><a href="#activities">الفعاليات</a></li>
+                <li><a href="#organize">تنظيم فعالية</a></li>
+                <li><a href="#leadership">القيادة</a></li>
+                <li><a href="#faq">الأسئلة الشائعة</a></li>
+                <li><a href="#contact">تواصل معنا</a></li>
+            </ul>
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div style="display: flex; justify-content: center; gap: 2rem; margin-bottom: 2rem; align-items: center; flex-wrap: wrap;">
+            <img src="https://via.placeholder.com/100x100/ffffff/003366?text=شعار+الجامعة" alt="شعار الجامعة" style="height: 100px;">
+            <div style="background: white; padding: 1rem; border-radius: 50%; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+                <div style="width: 80px; height: 80px; background: var(--secondary-color); border-radius: 8px; display: flex; align-items: center; justify-content: center; position: relative;">
+                    <div style="font-size: 2.5rem; color: white;">🏛️</div>
+                    <div style="position: absolute; bottom: -5px; right: -5px; background: var(--primary-color); color: white; padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.7rem; font-weight: bold;">FEA</div>
+                </div>
+            </div>
+            <img src="https://via.placeholder.com/100x100/ffffff/003366?text=شعار+الكلية" alt="شعار الكلية" style="height: 100px;">
+        </div>
+        <h1>مرحباً بك في نادي كلية الاقتصاد والإدارة</h1>
+        <p>بوابتك نحو التميز والقيادة وبناء مستقبل مهني مشرق</p>
+        <a href="#join" class="cta-button">انضم إلينا الآن</a>
+    </section>
+
+    <div class="container">
+        <!-- About Section -->
+        <section id="about">
+            <h2>🎯 تعرف على النادي</h2>
+            
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-icon">👁️</div>
+                    <h4>رؤيتنا</h4>
+                    <p>أن نكون النادي الطلابي الرائد في تنمية المهارات القيادية والمهنية لطلاب كلية الاقتصاد والإدارة.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon">🎯</div>
+                    <h4>رسالتنا</h4>
+                    <p>توفير بيئة محفزة للإبداع والتميز من خلال برامج وأنشطة متنوعة تساهم في بناء شخصية الطالب.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon">💡</div>
+                    <h4>قيمنا</h4>
+                    <p>التميز • العمل الجماعي • الاحترافية • المسؤولية المجتمعية • الابتكار</p>
+                </div>
+            </div>
+
+            <h3>🏗️ الهيكل التنظيمي للنادي</h3>
+            
+            <div style="background: var(--bg-light); padding: 2rem; border-radius: 10px; margin: 2rem 0; text-align: center;">
+                <div style="background: var(--primary-color); color: white; padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
+                    <h4 style="margin: 0;">وكيل الكلية للشؤون التعليمية</h4>
+                </div>
+                <div style="font-size: 2rem;">↓</div>
+                <div style="background: var(--secondary-color); color: white; padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
+                    <h4 style="margin: 0;">مشرف وحدة الأنشطة الطلابية</h4>
+                    <p style="margin: 0.5rem 0 0 0; font-size: 0.9rem;">المسؤول عن جميع الموافقات والإجراءات الإدارية</p>
+                </div>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 1rem;">
+                    <div>
+                        <div style="font-size: 1.5rem;">↓</div>
+                        <div style="background: var(--bg-white); padding: 1.5rem; border-radius: 8px; box-shadow: var(--shadow);">
+                            <h4 style="color: var(--primary-color);">الفرق التخصصية (10 فرق)</h4>
+                            <p>عضو هيئة تدريس (مشرف أكاديمي)</p>
+                            <p>↓</p>
+                            <p>قائد الفريق (طالب)</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div style="font-size: 1.5rem;">↓</div>
+                        <div style="background: var(--bg-white); padding: 1.5rem; border-radius: 8px; box-shadow: var(--shadow);">
+                            <h4 style="color: var(--primary-color);">اللجان العامة (5 لجان)</h4>
+                            <p>عضو هيئة تدريس (رائد اللجنة)</p>
+                            <p>↓</p>
+                            <p>أمين اللجنة (طالب)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h3>🏛️ الهيكل التنظيمي للفريق - مثال: فريق الإدارة الحكومية</h3>
+            
+            <div style="background: var(--bg-light); padding: 2rem; border-radius: 10px; margin: 2rem 0;">
+                <div style="text-align: center;">
+                    <div style="background: var(--accent-color); color: white; padding: 1rem; border-radius: 8px; margin-bottom: 1rem; display: inline-block;">
+                        <h4 style="margin: 0;">د. [اسم المشرف الأكاديمي]</h4>
+                        <p style="margin: 0.5rem 0 0 0;">المشرف الأكاديمي للفريق</p>
+                    </div>
+                </div>
+                
+                <div style="text-align: center; margin: 1rem 0;">↓</div>
+                
+                <div style="background: var(--secondary-color); color: white; padding: 1rem; border-radius: 8px; text-align: center; margin-bottom: 1rem;">
+                    <h4 style="margin: 0;">قائد الفريق</h4>
+                    <p style="margin: 0.5rem 0 0 0;">طالب منتخب - المسؤول التنفيذي الأول</p>
+                </div>
+                
+                <div style="text-align: center; margin: 1rem 0;">↓</div>
+                
+                <div style="background: var(--bg-white); padding: 1rem; border-radius: 8px; text-align: center; margin-bottom: 1rem; box-shadow: var(--shadow);">
+                    <h4 style="margin: 0; color: var(--primary-color);">نائب قائد الفريق</h4>
+                </div>
+                
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 2rem;">
+                    <div style="background: var(--bg-white); padding: 1.5rem; border-radius: 8px; text-align: center; box-shadow: var(--shadow);">
+                        <h5 style="color: var(--primary-color); margin-bottom: 0.5rem;">قسم العلاقات العامة</h5>
+                        <p style="font-size: 0.9rem; margin-bottom: 0.5rem;">رئيس القسم</p>
+                        <p style="font-size: 0.9rem; margin-bottom: 0.5rem;">نائب الرئيس</p>
+                        <p style="font-size: 0.9rem;">الأعضاء (5-7)</p>
+                    </div>
+                    
+                    <div style="background: var(--bg-white); padding: 1.5rem; border-radius: 8px; text-align: center; box-shadow: var(--shadow);">
+                        <h5 style="color: var(--primary-color); margin-bottom: 0.5rem;">قسم التنظيم</h5>
+                        <p style="font-size: 0.9rem; margin-bottom: 0.5rem;">رئيس القسم</p>
+                        <p style="font-size: 0.9rem; margin-bottom: 0.5rem;">نائب الرئيس</p>
+                        <p style="font-size: 0.9rem;">الأعضاء (5-7)</p>
+                    </div>
+                    
+                    <div style="background: var(--bg-white); padding: 1.5rem; border-radius: 8px; text-align: center; box-shadow: var(--shadow);">
+                        <h5 style="color: var(--primary-color); margin-bottom: 0.5rem;">القسم الإعلامي</h5>
+                        <p style="font-size: 0.9rem; margin-bottom: 0.5rem;">رئيس القسم</p>
+                        <p style="font-size: 0.9rem; margin-bottom: 0.5rem;">نائب الرئيس</p>
+                        <p style="font-size: 0.9rem;">الأعضاء (5-7)</p>
+                    </div>
+                </div>
+                
+                <div style="background: #e8f4f8; padding: 1rem; border-radius: 8px; margin-top: 1.5rem; text-align: center;">
+                    <p style="margin: 0;"><strong>إجمالي أعضاء الفريق:</strong> 25-30 عضو</p>
+                </div>
+            </div>
+            
+            <div style="background: var(--bg-light); padding: 2rem; border-radius: 10px; margin: 2rem 0;">
+                <h4>الفرق التخصصية:</h4>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1rem;">
+                    <div>💼 إدارة الأعمال</div>
+                    <div>💰 المحاسبة</div>
+                    <div>📊 المالية</div>
+                    <div>📈 الاقتصاد</div>
+                    <div>🎯 التسويق</div>
+                    <div>👥 الموارد البشرية</div>
+                    <div>🏛️ الإدارة الحكومية</div>
+                    <div>🏥 الإدارة الصحية</div>
+                    <div>💻 نظم المعلومات</div>
+                    <div>🌐 العلوم السياسية</div>
+                </div>
+                
+                <h4 style="margin-top: 2rem;">اللجان العامة:</h4>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1rem;">
+                    <div>📚 اللجنة الثقافية</div>
+                    <div>⚽ اللجنة الرياضية</div>
+                    <div>🤝 اللجنة الاجتماعية</div>
+                    <div>🕌 لجنة التوعية الإسلامية</div>
+                    <div>🎭 لجنة المسرح</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Join Section -->
+        <section id="join">
+            <h2>🚀 كيف تنضم إلينا؟</h2>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h4>الخطوة 1: اختر مسارك</h4>
+                    <p>حدد الفريق التخصصي أو اللجنة التي تناسب اهتماماتك وتخصصك.</p>
+                </div>
+                
+                <div class="timeline-item">
+                    <h4>الخطوة 2: تحقق من الشروط</h4>
+                    <ul>
+                        <li>أن تكون طالباً مسجلاً في الكلية</li>
+                        <li>اجتياز فصل دراسي واحد على الأقل</li>
+                        <li>الرغبة في المشاركة الفعالة</li>
+                    </ul>
+                </div>
+                
+                <div class="timeline-item">
+                    <h4>الخطوة 3: قدم طلبك</h4>
+                    <p>اختر الفريق المناسب لتخصصك واحصل على نموذج الانضمام:</p>
+                    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-top: 1rem;">
+                        <a href="#" class="team-link">
+                            💼 <span>فريق إدارة الأعمال</span>
+                        </a>
+                        <a href="#" class="team-link">
+                            💰 <span>فريق المحاسبة</span>
+                        </a>
+                        <a href="#" class="team-link">
+                            📊 <span>فريق المالية</span>
+                        </a>
+                        <a href="#" class="team-link">
+                            📈 <span>فريق الاقتصاد</span>
+                        </a>
+                        <a href="#" class="team-link">
+                            🎯 <span>فريق التسويق</span>
+                        </a>
+                        <a href="#" class="team-link">
+                            👥 <span>فريق الموارد البشرية</span>
+                        </a>
+                        <a href="#" class="team-link">
+                            🏛️ <span>فريق الإدارة الحكومية</span>
+                        </a>
+                        <a href="#" class="team-link">
+                            🏥 <span>فريق الإدارة الصحية</span>
+                        </a>
+                        <a href="#" class="team-link">
+                            💻 <span>فريق نظم المعلومات</span>
+                        </a>
+                        <a href="#" class="team-link">
+                            🌐 <span>فريق العلوم السياسية</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <h4>الخطوة 4: انتظر الرد</h4>
+                    <p>ستتلقى الرد خلال 3-5 أيام عمل عبر البريد الإلكتروني أو الجوال.</p>
+                </div>
+            </div>
+            
+            <div style="background: #10b981; color: white; padding: 2rem; border-radius: 10px; text-align: center;">
+                <h3>🎉 مبروك! أنت الآن عضو في النادي</h3>
+                <p>ستحصل على جدول الاجتماعات، إضافتك للمجموعات، وصلاحية الوصول للملفات.</p>
+            </div>
+        </section>
+
+        <!-- Activities Section -->
+        <section id="activities">
+            <h2>🎪 أنواع الفعاليات</h2>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>المستوى</th>
+                        <th>المكان</th>
+                        <th>مدة الموافقة</th>
+                        <th>أمثلة</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="badge success">الأول</span></td>
+                        <td>داخل مبنى النادي</td>
+                        <td>24 ساعة</td>
+                        <td>اجتماعات، ورش صغيرة</td>
+                    </tr>
+                    <tr>
+                        <td><span class="badge">الثاني</span></td>
+                        <td>داخل الكلية</td>
+                        <td>أسبوع</td>
+                        <td>محاضرات، معارض</td>
+                    </tr>
+                    <tr>
+                        <td><span class="badge primary">الثالث</span></td>
+                        <td>متحدث من كلية أخرى</td>
+                        <td>2-3 أسابيع</td>
+                        <td>محاضرات متخصصة</td>
+                    </tr>
+                    <tr>
+                        <td><span class="badge" style="background: #dc2626;">الرابع</span></td>
+                        <td>خارج الجامعة</td>
+                        <td>2-4 أسابيع</td>
+                        <td>زيارات ميدانية</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>📋 آلية الموافقات</h3>
+            <div style="background: var(--bg-light); padding: 2rem; border-radius: 10px; margin: 2rem 0;">
+                <h4 style="color: var(--primary-color); margin-bottom: 1.5rem;">مسار الموافقات حسب المستوى:</h4>
+                
+                <div style="margin-bottom: 2rem;">
+                    <h5 style="color: var(--secondary-color);">🟢 المستوى الأول (داخل مبنى النادي):</h5>
+                    <div style="background: white; padding: 1rem; border-radius: 8px; margin-top: 0.5rem;">
+                        <p style="margin: 0;">قائد الفريق ← المشرف الأكاديمي ← مشرف الأنشطة الطلابية</p>
+                    </div>
+                </div>
+                
+                <div style="margin-bottom: 2rem;">
+                    <h5 style="color: var(--secondary-color);">🟡 المستوى الثاني (داخل الكلية):</h5>
+                    <div style="background: white; padding: 1rem; border-radius: 8px; margin-top: 0.5rem;">
+                        <p style="margin: 0;">قائد الفريق ← المشرف الأكاديمي ← مشرف الأنشطة ← وكيل الكلية ← عميد الكلية</p>
+                    </div>
+                </div>
+                
+                <div style="margin-bottom: 2rem;">
+                    <h5 style="color: var(--secondary-color);">🔵 المستوى الثالث (متحدث من كلية أخرى):</h5>
+                    <div style="background: white; padding: 1rem; border-radius: 8px; margin-top: 0.5rem;">
+                        <p style="margin: 0;">قائد الفريق ← المشرف الأكاديمي ← مشرف الأنشطة ← وكيل الكلية ← عميد الكلية ← الكلية الأخرى للموافقة</p>
+                    </div>
+                </div>
+                
+                <div>
+                    <h5 style="color: var(--secondary-color);">🔴 المستوى الرابع (خارج الجامعة):</h5>
+                    <div style="background: white; padding: 1rem; border-radius: 8px; margin-top: 0.5rem;">
+                        <p style="margin: 0;">قائد الفريق ← المشرف الأكاديمي ← مشرف الأنشطة ← وكيل الكلية ← عميد الكلية ← رئيس الجامعة</p>
+                    </div>
+                </div>
+            </div>
+
+            <h3>📚 الأنشطة العلمية والأكاديمية</h3>
+            <div class="cards-grid">
+                <div class="card">
+                    <h4>الدورات التدريبية</h4>
+                    <p>2-5 أيام من التدريب المكثف في مهارات تخصصية مع شهادات معتمدة.</p>
+                </div>
+                <div class="card">
+                    <h4>ورش العمل</h4>
+                    <p>2-4 ساعات من التطبيق العملي لمهارات محددة بشكل تفاعلي.</p>
+                </div>
+                <div class="card">
+                    <h4>المحاضرات التخصصية</h4>
+                    <p>1-2 ساعة مع خبراء لمناقشة قضايا معاصرة في التخصص.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Organize Event Section -->
+        <section id="organize">
+            <h2>📋 دليل تنظيم فعالية</h2>
+            
+            <h3>🔍 المرحلة الأولى: التخطيط</h3>
+            <ol style="list-style: arabic; padding-right: 2rem;">
+                <li>حدد نوع ومستوى فعاليتك</li>
+                <li>أجب على الأسئلة الأساسية (ماذا، لماذا، متى، أين، كيف)</li>
+                <li>ضع خطة تنفيذية واضحة</li>
+            </ol>
+
+            <h3>📝 المرحلة الثانية: الموافقات</h3>
+            <p>احصل على النموذج المناسب واملأه بدقة، ثم اجمع التواقيع بالترتيب الصحيح.</p>
+
+            <h3>🎯 المرحلة الثالثة: التنفيذ</h3>
+            <div style="background: var(--bg-light); padding: 1.5rem; border-radius: 8px;">
+                <h4>قائمة مراجعة قبل الفعالية:</h4>
+                <ul>
+                    <li>تأكد من حجز المكان</li>
+                    <li>راجع قائمة المتحدثين</li>
+                    <li>جهز المواد المطلوبة</li>
+                    <li>أطلق الحملة الإعلانية</li>
+                    <li>وزع المهام على الفريق</li>
+                </ul>
+            </div>
+
+            <h3>📊 المرحلة الرابعة: التقييم والتقرير</h3>
+            <p>خلال 72 ساعة، اجمع البيانات وحلل النتائج واكتب التقرير باستخدام النموذج المخصص.</p>
+        </section>
+
+        <!-- Leadership Section -->
+        <section id="leadership">
+            <h2>👑 كيف تصبح قائداً؟</h2>
+            
+            <h3>المناصب القيادية المتاحة في الفرق التخصصية</h3>
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-icon">👤</div>
+                    <h4>قائد الفريق</h4>
+                    <p>القائد التنفيذي الأول للفريق، يدير جميع الأنشطة والفعاليات</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">👥</div>
+                    <h4>نائب القائد</h4>
+                    <p>الساعد الأيمن للقائد، ينوب عنه في حال غيابه</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">📢</div>
+                    <h4>رئيس العلاقات العامة</h4>
+                    <p>مسؤول التواصل الخارجي وبناء الشراكات</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🎪</div>
+                    <h4>رئيس التنظيم</h4>
+                    <p>مسؤول التخطيط اللوجستي وتنظيم الفعاليات</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">📱</div>
+                    <h4>رئيس الإعلام</h4>
+                    <p>مسؤول المحتوى والتغطية الإعلامية</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">👨‍💼</div>
+                    <h4>نواب رؤساء الأقسام</h4>
+                    <p>مساعدو رؤساء الأقسام في مهامهم</p>
+                </div>
+            </div>
+
+            <h3>📊 معايير الاختيار</h3>
+            <table>
+                <tr>
+                    <th>المعيار</th>
+                    <th>قائد الفريق</th>
+                    <th>المناصب الأخرى</th>
+                </tr>
+                <tr>
+                    <td>المعدل التراكمي</td>
+                    <td>3.00 فأعلى</td>
+                    <td>2.75 فأعلى</td>
+                </tr>
+                <tr>
+                    <td>الخبرة المطلوبة</td>
+                    <td>فصل دراسي كامل كعضو فاعل</td>
+                    <td>مشاركة فعالة في الأنشطة</td>
+                </tr>
+                <tr>
+                    <td>المهارات</td>
+                    <td>قيادة، تخطيط، تواصل متقدم</td>
+                    <td>مهارات حسب المنصب</td>
+                </tr>
+            </table>
+
+            <h3>📅 الجدول الزمني لاختيار القيادات</h3>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h4>قبل نهاية الفصل بـ 4 أسابيع</h4>
+                    <p>الإعلان عن فتح باب الترشح للمناصب القيادية</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>قبل نهاية الفصل بـ 3 أسابيع</h4>
+                    <p>فتح باب التقديم وتلقي الطلبات</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>قبل نهاية الفصل بـ 2 أسبوع</h4>
+                    <p>إغلاق الترشيحات ومراجعة الطلبات</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>قبل نهاية الفصل بـ 1 أسبوع</h4>
+                    <p>إجراء المقابلات الشخصية</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>بداية الفصل الجديد</h4>
+                    <p>إعلان النتائج وتسليم المهام</p>
+                </div>
+            </div>
+
+            <div style="background: var(--secondary-color); color: white; padding: 2rem; border-radius: 10px; margin-top: 2rem;">
+                <h3>💡 نصائح للنجاح في القيادة</h3>
+                <ol style="list-style: arabic; padding-right: 2rem;">
+                    <li>ابدأ بالمشاركة الفعالة من اليوم الأول</li>
+                    <li>تطوع للمهام الصعبة وأثبت قدراتك</li>
+                    <li>ابنِ علاقات إيجابية مع الجميع</li>
+                    <li>طور مهاراتك باستمرار</li>
+                    <li>كن مبادراً وقدم أفكاراً جديدة</li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq">
+            <h2>❓ الأسئلة الشائعة</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    هل يمكنني الانضمام لأكثر من فريق/لجنة؟
+                </div>
+                <div class="faq-answer">
+                    يُفضل التركيز على فريق/لجنة واحدة لضمان المشاركة الفعالة، لكن يمكنك المشاركة كضيف في فعاليات الفرق الأخرى.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    هل العضوية مدفوعة؟
+                </div>
+                <div class="faq-answer">
+                    لا، العضوية مجانية تماماً. النادي يعتمد على دعم الكلية والرعايات.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    كيف أعرف مواعيد الفعاليات؟
+                </div>
+                <div class="faq-answer">
+                    عبر قنوات التواصل الرسمية (WhatsApp، Instagram، البريد الإلكتروني).
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    متى يمكنني الترشح للقيادة؟
+                </div>
+                <div class="faq-answer">
+                    بعد قضاء فصل دراسي كامل كعضو فاعل وتحقيق الشروط المطلوبة.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    هل أحصل على شهادات معتمدة؟
+                </div>
+                <div class="faq-answer">
+                    نعم، جميع البرامج التدريبية والمشاركات تمنح شهادات معتمدة من الكلية.
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>📞 تواصل معنا</h2>
+            
+            <div class="cards-grid">
+                <div class="card">
+                    <h4>📍 مكتب الأنشطة الطلابية</h4>
+                    <p><strong>الموقع:</strong> مبنى الكلية - الدور الثاني</p>
+                    <p><strong>أوقات العمل:</strong> الأحد - الخميس | 8:00 ص - 2:00 م</p>
+                </div>
+                
+                <div class="card">
+                    <h4>📱 وسائل التواصل</h4>
+                    <p><strong>البريد:</strong> fea.club@university.edu.sa</p>
+                    <p><strong>الجوال:</strong> 05XXXXXXXX</p>
+                    <p><strong>واتساب:</strong> 05XXXXXXXX</p>
+                </div>
+                
+                <div class="card">
+                    <h4>🌐 وسائل التواصل الاجتماعي</h4>
+                    <p>Twitter: @FEA_Club</p>
+                    <p>Instagram: @fea_club</p>
+                    <p>Snapchat: @fea_club</p>
+                </div>
+            </div>
+
+            <div style="background: var(--bg-light); padding: 2rem; border-radius: 10px; margin-top: 2rem; text-align: center;">
+                <h3>💌 صندوق المقترحات</h3>
+                <p>لديك فكرة؟ اقتراح؟ شكوى؟</p>
+                <p>📧 أرسل لنا على: suggestions.fea@university.edu.sa</p>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div style="display: flex; justify-content: center; gap: 2rem; margin-bottom: 2rem; align-items: center; flex-wrap: wrap; opacity: 0.8;">
+            <img src="https://via.placeholder.com/80x80/ffffff/003366?text=شعار+الجامعة" alt="شعار الجامعة" style="height: 80px;">
+            <div style="width: 60px; height: 60px; background: white; border-radius: 8px; display: flex; align-items: center; justify-content: center; position: relative;">
+                <div style="font-size: 2rem; color: var(--secondary-color);">🏛️</div>
+            </div>
+            <img src="https://via.placeholder.com/80x80/ffffff/003366?text=شعار+الكلية" alt="شعار الكلية" style="height: 80px;">
+        </div>
+        <h3>🌟 معاً... نصنع الفرق!</h3>
+        <p>© جميع الحقوق محفوظة - نادي كلية الاقتصاد والإدارة</p>
+        <div style="margin-top: 1rem; font-size: 0.9rem;">
+            <p>جامعة الملك عبدالعزيز - كلية الاقتصاد والإدارة</p>
+            <p style="margin-top: 0.5rem;">تاريخ التحديث: ديسمبر 2024 | الإصدار 1.0</p>
+        </div>
+    </footer>
+
+    <script>
+        // Toggle mobile menu
+        function toggleMenu() {
+            const navMenu = document.getElementById('navMenu');
+            navMenu.classList.toggle('active');
+        }
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Close mobile menu if open
+                    document.getElementById('navMenu').classList.remove('active');
+                }
+            });
+        });
+
+        // FAQ toggle
+        function toggleFAQ(element) {
+            element.parentElement.classList.toggle('active');
+        }
+
+        // Navbar shadow on scroll
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.15)';
+            } else {
+                nav.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
+            }
+        });
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all sections
+        document.querySelectorAll('section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(20px)';
+            section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
