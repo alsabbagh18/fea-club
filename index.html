@@ -159,7 +159,7 @@
         }
 
         h3 {
-            color: var(--secondary-color);
+            color: var(--text-dark);
             margin: 1.5rem 0 1rem;
             font-size: 1.5rem;
         }
@@ -448,9 +448,7 @@
     <!-- Navigation -->
     <nav>
         <div class="nav-container">
-            <div class="nav-logo" style="display: flex; align-items: center; gap: 0.5rem;">
-                </div>
-            </div>
+            <div class="nav-logo">🏛️ نادي كلية الاقتصاد والإدارة</div>
             <ul class="nav-menu" id="navMenu">
                 <li><a href="#about">عن النادي</a></li>
                 <li><a href="#join">كيف تنضم</a></li>
@@ -458,6 +456,7 @@
                 <li><a href="#organize">تنظيم فعالية</a></li>
                 <li><a href="#leadership">القيادة</a></li>
                 <li><a href="#faq">الأسئلة الشائعة</a></li>
+                <li><a href="#library">المكتبة الرقمية</a></li>
                 <li><a href="#contact">تواصل معنا</a></li>
             </ul>
             <div class="menu-toggle" onclick="toggleMenu()">☰</div>
@@ -466,8 +465,6 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <div style="display: flex; justify-content: center; gap: 2rem; margin-bottom: 2rem; align-items: center; flex-wrap: wrap;">
-
         <h1>مرحباً بك في نادي كلية الاقتصاد والإدارة</h1>
         <p>بوابتك نحو التميز والقيادة وبناء مستقبل مهني مشرق</p>
         <a href="#join" class="cta-button">انضم إلينا الآن</a>
@@ -499,15 +496,11 @@
             </div>
 
             <h3>🏗️ الهيكل التنظيمي للنادي</h3>
-            
-            <div style="background: var(--bg-light); padding: 2rem; border-radius: 10px; margin: 2rem 0; text-align: center;">
-                <div style="background: var(--primary-color); color: white; padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
-                    <h4 style="margin: 0;">إدارة الكلية</h4>
-                </div>
-                <div style="font-size: 2rem;">↓</div>
-                <div style="background: var(--secondary-color); color: white; padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
-                    <h4 style="margin: 0;">أ. وائل طلعت غراب</h4>
-                    <p style="margin: 0.5rem 0 0 0; font-size: 0.9rem;">مشرف وحدة الأنشطة الطلابية</p>
+                            <div style="background: var(--secondary-color); color: white; padding: 1.5rem; border-radius: 8px; margin-bottom: 1rem; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+                    <h4 style="margin: 0; font-size: 1.3rem;">أ. وائل طلعت غراب</h4>
+                    <p style="margin: 0.5rem 0 0 0; font-size: 1rem;">مشرف الأنشطة الطلابية</p>
+                    <hr style="margin: 1rem 0; opacity: 0.3;">
+                    <p style="margin: 0; font-size: 0.9rem;">✓ الموافقات النهائية | ✓ الإشراف المباشر | ✓ التنسيق والمتابعة</p>
                 </div>
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 1rem;">
                     <div>
@@ -522,7 +515,7 @@
                     <div>
                         <div style="font-size: 1.5rem;">↓</div>
                         <div style="background: var(--bg-white); padding: 1.5rem; border-radius: 8px; box-shadow: var(--shadow);">
-                            <h4 style="color: var(--primary-color);">اللجان العامة (5 لجان)</h4>
+                            <h4 style="color: var(--primary-color);">اللجان العامة</h4>
                             <p>عضو هيئة تدريس (رائد اللجنة)</p>
                             <p>↓</p>
                             <p>أمين اللجنة (طالب)</p>
@@ -536,16 +529,16 @@
             <div style="background: var(--bg-light); padding: 2rem; border-radius: 10px; margin: 2rem 0;">
                 <div style="text-align: center;">
                     <div style="background: var(--accent-color); color: white; padding: 1rem; border-radius: 8px; margin-bottom: 1rem; display: inline-block;">
-                        <h4 style="margin: 0;">د. [عبدالله شويش المطيري]</h4>
-                        <p style="margin: 0.5rem 0 0 0;">المشرف الأكاديمي للفريق</p>
+                        <h4 style="margin: 0;">المشرف الأكاديمي للفريق</h4>
+                        <p style="margin: 0.5rem 0 0 0;">عضو هيئة التدريس المسؤول عن الفريق</p>
                     </div>
                 </div>
                 
                 <div style="text-align: center; margin: 1rem 0;">↓</div>
                 
                 <div style="background: var(--secondary-color); color: white; padding: 1rem; border-radius: 8px; text-align: center; margin-bottom: 1rem;">
-                    <h4 style="margin: 0;">قائد الفريق</h4>
-                    <p style="margin: 0.5rem 0 0 0;">سراج عمر الصباغ</p>
+                    <h4 style="margin: 0;"> قائد الفريق</h4>
+                    <p style="margin: 0.5rem 0 0 0;">المسؤول التنفيذي الأول</p>
                 </div>
                 
                 <div style="text-align: center; margin: 1rem 0;">↓</div>
@@ -603,7 +596,7 @@
                     <div>⚽ اللجنة الرياضية</div>
                     <div>🤝 اللجنة الاجتماعية</div>
                     <div>🕌 لجنة التوعية الإسلامية</div>
-                    <div>🎭 لجنة المسرح</div>
+                    <div>🎭 المسرح</div>
                 </div>
             </div>
         </section>
@@ -631,34 +624,34 @@
                     <h4>الخطوة 3: قدم طلبك</h4>
                     <p>اختر الفريق المناسب لتخصصك واحصل على نموذج الانضمام:</p>
                     <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-top: 1rem;">
-                        <a href="#" class="team-link">
+                        <a href="https://forms.google.com/business-admin" target="_blank" class="team-link">
                             💼 <span>فريق إدارة الأعمال</span>
                         </a>
-                        <a href="#" class="team-link">
+                        <a href="https://forms.google.com/accounting" target="_blank" class="team-link">
                             💰 <span>فريق المحاسبة</span>
                         </a>
-                        <a href="#" class="team-link">
+                        <a href="https://forms.google.com/finance" target="_blank" class="team-link">
                             📊 <span>فريق المالية</span>
                         </a>
-                        <a href="#" class="team-link">
+                        <a href="https://forms.google.com/economics" target="_blank" class="team-link">
                             📈 <span>فريق الاقتصاد</span>
                         </a>
-                        <a href="#" class="team-link">
+                        <a href="https://forms.google.com/marketing" target="_blank" class="team-link">
                             🎯 <span>فريق التسويق</span>
                         </a>
-                        <a href="#" class="team-link">
+                        <a href="https://forms.google.com/hr" target="_blank" class="team-link">
                             👥 <span>فريق الموارد البشرية</span>
                         </a>
-                        <a href="#" class="team-link">
+                        <a href="https://forms.google.com/public-admin" target="_blank" class="team-link">
                             🏛️ <span>فريق الإدارة الحكومية</span>
                         </a>
-                        <a href="#" class="team-link">
+                        <a href="https://forms.google.com/health-admin" target="_blank" class="team-link">
                             🏥 <span>فريق الإدارة الصحية</span>
                         </a>
-                        <a href="#" class="team-link">
+                        <a href="https://forms.google.com/info-systems" target="_blank" class="team-link">
                             💻 <span>فريق نظم المعلومات</span>
                         </a>
-                        <a href="#" class="team-link">
+                        <a href="https://forms.google.com/political-science" target="_blank" class="team-link">
                             🌐 <span>فريق العلوم السياسية</span>
                         </a>
                     </div>
@@ -666,13 +659,13 @@
                 
                 <div class="timeline-item">
                     <h4>الخطوة 4: انتظر الرد</h4>
-                    <p>ستتلقى الرد خلال 3-5 أيام عمل عبر البريد الإلكتروني أو الجوال.</p>
+                    <p>ستتلقى الرد خلال 3-5 أيام عمل عبر الواتساب.</p>
                 </div>
             </div>
             
             <div style="background: #10b981; color: white; padding: 2rem; border-radius: 10px; text-align: center;">
                 <h3>🎉 مبروك! أنت الآن عضو في النادي</h3>
-                <p>ستحصل على جدول الاجتماعات، إضافتك للمجموعات، وصلاحية الوصول للملفات.</p>
+                <p>سيتم إضافتك لمجموعة الفريق في حال قبولك</p>
             </div>
         </section>
 
@@ -857,6 +850,11 @@
                     <td>قيادة، تخطيط، تواصل متقدم</td>
                     <td>مهارات حسب المنصب</td>
                 </tr>
+                <tr>
+                    <td>السجل السلوكي</td>
+                    <td>خالي من الإنذارات</td>
+                    <td>خالي من الإنذارات</td>
+                </tr>
             </table>
 
             <h3>📅 الجدول الزمني لاختيار القيادات</h3>
@@ -922,7 +920,7 @@
                     كيف أعرف مواعيد الفعاليات؟
                 </div>
                 <div class="faq-answer">
-                    عبر قنوات التواصل الرسمية (WhatsApp، Instagram، البريد الإلكتروني).
+                    عبر حسابات الكلية او قناة النادي على الواتساب
                 </div>
             </div>
 
@@ -945,6 +943,78 @@
             </div>
         </section>
 
+        <!-- Digital Library Section -->
+        <section id="library">
+            <h2>📚 المكتبة الرقمية</h2>
+            <p style="text-align: center; margin-bottom: 2rem;">مرجعك الشامل لجميع وثائق ونماذج وأرشيف النادي</p>
+            
+            <div class="cards-grid">
+                <a href="https://drive.google.com/fea-club/visual-identity" target="_blank" class="card" style="text-decoration: none; color: inherit; transition: all 0.3s;">
+                    <div class="card-icon">🎨</div>
+                    <h4>دليل الهوية البصرية</h4>
+                    <p>الشعارات، الألوان، الخطوط، وإرشادات الاستخدام الصحيح لهوية النادي</p>
+                    <div style="margin-top: 1rem;">
+                        <span class="badge primary">PDF</span>
+                        <span class="badge success">محدث</span>
+                    </div>
+                </a>
+                
+                <a href="https://drive.google.com/fea-club/forms" target="_blank" class="card" style="text-decoration: none; color: inherit; transition: all 0.3s;">
+                    <div class="card-icon">📋</div>
+                    <h4>مكتبة النماذج</h4>
+                    <p>جميع النماذج الرسمية للفعاليات والتقارير والعضوية جاهزة للتحميل</p>
+                    <div style="margin-top: 1rem;">
+                        <span class="badge">نماذج</span>
+                        <span class="badge warning">Word/PDF</span>
+                    </div>
+                </a>
+                
+                <a href="https://drive.google.com/fea-club/reports" target="_blank" class="card" style="text-decoration: none; color: inherit; transition: all 0.3s;">
+                    <div class="card-icon">📊</div>
+                    <h4>التقارير السابقة</h4>
+                    <p>أرشيف التقارير الربعية والسنوية للاستفادة من التجارب السابقة</p>
+                    <div style="margin-top: 1rem;">
+                        <span class="badge primary">2024-2025</span>
+                        <span class="badge">PDF</span>
+                    </div>
+                </a>
+                
+                <a href="https://drive.google.com/fea-club/archive" target="_blank" class="card" style="text-decoration: none; color: inherit; transition: all 0.3s;">
+                    <div class="card-icon">🗂️</div>
+                    <h4>أرشيف النادي</h4>
+                    <p>توثيق شامل لجميع الفعاليات والأنشطة مع الصور والفيديوهات</p>
+                    <div style="margin-top: 1rem;">
+                        <span class="badge success">محدث باستمرار</span>
+                        <span class="badge">Google Drive</span>
+                    </div>
+                </a>
+            </div>
+
+            <div style="background: var(--bg-light); padding: 2rem; border-radius: 10px; margin-top: 2rem; text-align: center;">
+                <h3>📁 هيكل المجلدات على Google Drive</h3>
+                <div style="background: white; padding: 1.5rem; border-radius: 8px; margin-top: 1rem; text-align: right;">
+                    <pre style="font-family: 'Courier New', monospace; line-height: 1.8; margin: 0; direction: ltr;">
+📁 نادي كلية الاقتصاد والإدارة/
+├── 📁 الهوية البصرية/
+│   ├── 📄 دليل الهوية البصرية.pdf
+│   ├── 🎨 الشعارات/
+│   └── 🎨 القوالب/
+├── 📁 النماذج/
+│   ├── 📄 نماذج الفعاليات/
+│   ├── 📄 نماذج التقارير/
+│   └── 📄 نماذج العضوية/
+├── 📁 التقارير/
+│   ├── 📊 التقارير الربعية/
+│   └── 📊 التقارير السنوية/
+└── 📁 الأرشيف/
+    ├── 📸 الفعاليات/
+    ├── 🎥 الفيديوهات/
+    └── 📰 التغطيات الإعلامية/</pre>
+                </div>
+                <a href="https://drive.google.com/fea-club" target="_blank" class="cta-button" style="margin-top: 1.5rem;">الدخول للمكتبة الرقمية</a>
+            </div>
+        </section>
+
         <!-- Contact Section -->
         <section id="contact">
             <h2>📞 تواصل معنا</h2>
@@ -952,8 +1022,8 @@
             <div class="cards-grid">
                 <div class="card">
                     <h4>📍 مكتب الأنشطة الطلابية</h4>
-                    <p><strong>الموقع:</strong> مبنى الكلية - الدور الثاني</p>
-                    <p><strong>أوقات العمل:</strong> الأحد - الخميس | 8:00 ص - 2:00 م</p>
+                    <p><strong>الموقع:</strong> مبنى 122 - الدور الثاني</p>
+                    <p><strong>أوقات العمل:</strong> الأحد - الخميس | 10:00 ص - 2:00 م</p>
                 </div>
                 
                 <div class="card">
@@ -974,19 +1044,18 @@
             <div style="background: var(--bg-light); padding: 2rem; border-radius: 10px; margin-top: 2rem; text-align: center;">
                 <h3>💌 صندوق المقترحات</h3>
                 <p>لديك فكرة؟ اقتراح؟ شكوى؟</p>
-                <p>📧 أرسل لنا على: suggestions.fea@university.edu.sa</p>
+                <p>📧 أرسل لنا على: seraj.alsabbagh@gmail.com</p>
             </div>
         </section>
     </div>
 
     <!-- Footer -->
     <footer>
-
         <h3>🌟 معاً... نصنع الفرق!</h3>
         <p>© جميع الحقوق محفوظة - نادي كلية الاقتصاد والإدارة</p>
         <div style="margin-top: 1rem; font-size: 0.9rem;">
             <p>جامعة الملك عبدالعزيز - كلية الاقتصاد والإدارة</p>
-            <p style="margin-top: 0.5rem;">تاريخ التحديث: يونيو 2025 | تصميم: سراج عمر الصباغ</p>
+            <p style="margin-top: 0.5rem;">تاريخ التحديث: يونيو 2025 | تصميم: سراج الصباغ</p>
         </div>
     </footer>
 
